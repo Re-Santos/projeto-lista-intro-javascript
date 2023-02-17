@@ -1,5 +1,5 @@
 // EXEMPLOS DE IMPLEMENTAÇÃO ---------------------------------------------------------------
-/*
+
 // EXERCÍCIO 0A
 function soma(num1, num2) {
   // implemente sua lógica aqui
@@ -141,43 +141,39 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
   return check
 
 
-}*//*
+}*/
 
 // EXERCÍCIO 13
+
+
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
-  const anoAtual= prompt(`Qual o ano atual?`)
+   const anoAtual= prompt(`Qual o ano atual?`)
   const anoNascimento= prompt(`Qual o ano de nascimento`)
   const anoEmissao= prompt(`Em que ano a carteira de identidade foi emitida?`)
   const idade= anoAtual-anoNascimento
-  const tempoCnh= anoAtual -anoEmissao
-  const renovacao5Anos= idade>=20 && tempoCnh<=5
-  const renovacao10Anos= idade>=20 && <=50 && tempoCnh<=10
-  const renovacao15anos= idade>50 && tempoCnh<=15
-  const checkRenovacao= (renovacao5Anos||renovacao10Anos||renovacao15anos||)
+  const tempoCnh= anoAtual-anoEmissao
+  const renovacao5Anos= idade<=20  && tempoCnh>=5
+  const renovacao10Anos= idade>20 && idade<50  && tempoCnh>=10 
+  const renovacao15anos= idade>50 && tempoCnh>=15 
+  const checkRenovacao= (renovacao5Anos||renovacao10Anos||renovacao15anos)
   console.log (checkRenovacao)
-
 }
-const certo = checkRenovacao
-console.log (certo)
-*/
+
 // EXERCÍCIO 14
 
+function checaAnoBissexto(ano) {
+  // implemente sua lógica aqui
+  
 
-
-
+}
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
-  const temMaisDezoito =  (prompt(`Você tem mais de 18 anos?`))
-  const ensinoMedio = (prompt(`Você possui o ensino médio completo?`))
-  const disponibilidade = (prompt(`Você possui disponibilidade exclusiva durante os horários do curso?`))
-  const maiorDezoito= temMaisDezoito>=18 
-  const conclusaoMedio= ensinoMedio 
-  const tempoParaEstudo= disponibilidade 
+  const temMaisDezoito = prompt(`Você tem mais de 18 anos?`)
+  const ensinoMedio = prompt(`Você possui o ensino médio completo?`)
+  const disponibilidade = prompt(`Você possui disponibilidade exclusiva durante os horários do curso?`)
+  const inscricaoValida= temMaisDezoito===`sim` && ensinoMedio ===`sim` && disponibilidade ===`sim`
  
-  const checkValidade = maiorDezoito == conclusaoMedio == tempoParaEstudo
-
-  console.log (checkValidade)
-
+   console.log (inscricaoValida)
 }
