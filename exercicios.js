@@ -40,7 +40,7 @@ function imprimeIdade() {
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
   // implemente sua lógica aqui
-  const kilos = Number (prompt(`digite seu peso em KG`))
+  const kilos= Number (prompt(`digite seu peso em KG`))
   const metros = Number (prompt(`Digite sua altura`))
   const imc = peso/(altura*altura)
   return imc
@@ -111,8 +111,6 @@ function retornaPrimeiroElemento(array) {
 
 }
 
-
-
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
   // implemente sua lógica aqui
@@ -141,14 +139,12 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
   return check
 
 
-}*/
+}
 
 // EXERCÍCIO 13
-
-
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
-   const anoAtual= prompt(`Qual o ano atual?`)
+  const anoAtual= prompt(`Qual o ano atual?`)
   const anoNascimento= prompt(`Qual o ano de nascimento`)
   const anoEmissao= prompt(`Em que ano a carteira de identidade foi emitida?`)
   const idade= anoAtual-anoNascimento
@@ -161,13 +157,16 @@ function checaRenovacaoRG() {
 }
 
 // EXERCÍCIO 14
-
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
-  
+  const primeiraDeclaracao =ano % 400 === 0
+  const segundaDeclaracao= ano % 4 === 0 && ano % 100 !== 0
+  const checkBissexto=ano % 4 === 0 && ano % 100 !== 0 || ano % 400 === 0
 
+  return checkBissexto
 }
-// EXERCÍCIO 15
+
+ // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
   const temMaisDezoito = prompt(`Você tem mais de 18 anos?`)
