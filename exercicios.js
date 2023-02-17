@@ -46,7 +46,7 @@ function calculaIMC(peso, altura) {
   return imc
     
 }
-*//*
+
 // EXERCÍCIO 04
 function imprimeInformacoesUsuario() {
   // implemente sua lógica aqui
@@ -58,8 +58,7 @@ function imprimeInformacoesUsuario() {
 
   console.log (mensagem)
 }
-*/
-/*
+
 
 // EXERCÍCIO 05
 function imprimeTresCoresFavoritas() {
@@ -79,7 +78,7 @@ function retornaStringEmMaiuscula(string) {
   return frase
 
 }
-*//*
+
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
   // implemente sua lógica aqui
@@ -90,7 +89,7 @@ function calculaIngressosEspetaculo(custo, valorIngresso) {
   return precisaVender
  
  }
-*//*
+
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
   // implemente sua lógica aqui
@@ -101,7 +100,7 @@ function checaStringsMesmoTamanho(string1, string2) {
   const mesmoTamanho= tamanhoFrase1 === tamanhoFrase2 
   return mesmoTamanho
   
-}*//*
+}
 
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
@@ -111,7 +110,7 @@ function retornaPrimeiroElemento(array) {
   return primeiroElemento
 
 }
-*/
+
 
 
 // EXERCÍCIO 10
@@ -132,7 +131,7 @@ function trocaPrimeiroEUltimo(array) {
   return array
  
 }
-/*
+
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   // implemente sua lógica aqui
@@ -142,38 +141,42 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
   return check
 
 
-}
-/*
+}*//*
+
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
   const anoAtual= prompt(`Qual o ano atual?`)
   const anoNascimento= prompt(`Qual o ano de nascimento`)
   const anoEmissao= prompt(`Em que ano a carteira de identidade foi emitida?`)
-  const renovacao5Anos= anoAtual-anoNascimento>20&& anoAtual-anoEmissao>=5
-  const renovacao10Anos=anoAtual-anoNascimento>20 && anoAtual-anoNascimento<50 && anoAtual-anoEmissao>=10
-  const renovacao15anos= anoAtual-anoNascimento>50&& anoAtual-anoEmissao>=15
-  const checkRenovacao= (renovacao5Anos(true),renovacao10Anos(true),renovacao15anos(true))
+  const idade= anoAtual-anoNascimento
+  const tempoCnh= anoAtual -anoEmissao
+  const renovacao5Anos= idade>=20 && tempoCnh<=5
+  const renovacao10Anos= idade>=20 && <=50 && tempoCnh<=10
+  const renovacao15anos= idade>50 && tempoCnh<=15
+  const checkRenovacao= (renovacao5Anos||renovacao10Anos||renovacao15anos||)
   console.log (checkRenovacao)
-*//*
-}
-// EXERCÍCIO 14
-function checaAnoBissexto(ano) {
-  // implemente sua lógica aqui
-  const bissextos = (ano % 400 === 0)
-  const bissextos2= (ano % 4 === 0 && ano % 100 !== 0)
-  const naoBissextos = (ano % 4 === 0 && ano % 100 !== 0 || ano % 400 === 0)
 
-}*/
+}
+const certo = checkRenovacao
+console.log (certo)
+*/
+// EXERCÍCIO 14
+
+
+
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
-  const temMaisDezoito = Boolean (prompt(`Você tem mais de 18 anos?`))
-  const ensinoMedio = Boolean (prompt(`Você possui o ensino médio completo?`))
-  const disponibilidade = Boolean (prompt(`Você possui disponibilidade exclusiva durante os horários do curso?`))
+  const temMaisDezoito =  (prompt(`Você tem mais de 18 anos?`))
+  const ensinoMedio = (prompt(`Você possui o ensino médio completo?`))
+  const disponibilidade = (prompt(`Você possui disponibilidade exclusiva durante os horários do curso?`))
+  const maiorDezoito= temMaisDezoito>=18 
+  const conclusaoMedio= ensinoMedio 
+  const tempoParaEstudo= disponibilidade 
  
-  const checkValidade = temMaisDezoito === ensinoMedio === disponibilidade
+  const checkValidade = maiorDezoito == conclusaoMedio == tempoParaEstudo
 
   console.log (checkValidade)
 
